@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            src="https://kit.fontawesome.com/c6926bf7a6.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <script src="./assets/js/script.js" defer></script>
+        <title>TODO List</title>
+    </head>
+    <body>
+        <section class="todo-container">
+            <div class="todo-head">
+                <h2>Lista de tareas</h2>
+                <p id="today-date">Miércoles, 20 de Septiembre 2023</p>
+            </div>
+            <div class="todo-add-task">
+                <div class="input-box">
+                    <input
+                        class="text-input"
+                        id="task-input"
+                        type="text"
+                        placeholder="Ingrese Nueva Tarea:"
+                        autocomplete="off"
+                        required
+                    />
+                    <label for="task-input" class="label">New Task</label>
+                    <div class="add-task-btn-box">
+                        <i
+                            id="add-task-btn"
+                            class="fa-solid fa-circle-plus"
+                        ></i>
+                    </div>
+                </div>
+            </div>
+            <div class="task-list">
+                <div class="task-list-head">
+                    <div class="tasks-thead" id="tasks-thead">
+                        <p class="id-head">
+                            <i id="id-sort-btn" class="fa-solid fa-sort"></i> ID
+                        </p>
+                        <p class="task-head">
+                            <i id="task-sort-btn" class="fa-solid fa-sort"></i>
+                            Tarea
+                        </p>
+                    </div>
+                    <div class="done-check" id="done-check-box">
+                        <input
+                            type="checkbox"
+                            name="done-check"
+                            id="done-check"
+                        />
+                        <label for="done-check">Mostrar Completadas</label>
+                    </div>
+                </div>
+                <div id="task-list-container"></div>
+            </div>
+            <div class="todo-footer">
+                <p>Total: <span id="total-span"></span></p>
+                <p>Completadas: <span id="completed-span"></span></p>
+                <p>No Completadas: <span id="incompleted-span"></span></p>
+            </div>
+        </section>
+    </body>
+</html>

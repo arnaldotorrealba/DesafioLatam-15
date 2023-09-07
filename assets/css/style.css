@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+
+.todo-container {
+    max-width: 700px;
+    margin: 20px auto;
+    border-radius: 1rem;
+    background-color: #7b9fe5;
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-container > * {
+    padding: 1rem;
+}
+
+.todo-head {
+    border-bottom: 2px solid #fff;
+    padding: 3rem 1rem 0.5rem 1rem;
+}
+
+.todo-head h2 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.todo-head p {
+    font-style: italic;
+}
+
+.todo-add-task {
+    background-color: #fff;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    transition: all 0.2s;
+    padding: 0 2px;
+    z-index: 1;
+    color: #b3b3b3;
+}
+
+.text-input {
+    padding: 0.3rem;
+    width: 100%;
+    border: 2px solid #382f26;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s;
+    color: #000;
+    flex-grow: 1;
+}
+
+.label::before {
+    content: "";
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 100%;
+    z-index: -1;
+}
+
+.text-input:focus {
+    border: 2px solid #7b9fe5;
+}
+
+.text-input:focus + .label,
+.text-input:valid + .label {
+    top: -10px;
+    color: #7b9fe5;
+    font-size: 14px;
+}
+
+.text-input::placeholder {
+    font-size: 16px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.text-input:focus::placeholder {
+    opacity: 1;
+    animation-delay: 0.2s;
+}
+
+.add-task-btn-box i {
+    font-size: 32px;
+}
+
+.add-task-btn-box:hover {
+    color: #7b9fe5;
+}
+
+/* Listado */
+
+.task-list-head {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    gap: 0.5rem;
+    margin: 0.5rem;
+}
+
+.tasks-thead {
+    display: flex;
+    gap: 0.5rem;
+    padding-left: 20px;
+}
+
+.id-head {
+    width: 2rem;
+}
+
+/* Tareas */
+
+.task-box {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.5rem;
+    border-bottom: 1px solid #fff;
+}
+
+.task-id {
+    width: 2rem;
+    text-align: center;
+}
+
+.task-name {
+    flex-grow: 1;
+}
+
+.completed-task {
+    font-weight: 300;
+    font-style: italic;
+    color: #fff;
+}
+
+.todo-footer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
